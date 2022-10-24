@@ -1,0 +1,248 @@
+% Resume in Latex
+% Original Author : Aras Gungore
+% Adapted By: Jason Ashley
+% License : MIT
+%------------------------
+
+% !TEX program = lualatex
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{hyphenat}
+\usepackage{fontawesome}
+\usepackage{setspace}
+% \input{glyphtounicode}
+% \usepackage{lua-visual-debug}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\setstretch{1}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom{}
+\raggedright{}
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule\vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+% \pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} #2 & \textit{\small #3} \vspace{-3pt} \\
+      \textit{\small#4} \vspace{1pt} \\
+    \end{tabular*}\vspace{-8pt}
+}
+
+
+\newcommand{\resumeSubSubheading}[2]{
+    \vspace{-5pt}\item
+    \begin{tabular*}{1.0\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-10pt}
+}
+
+
+\newcommand{\resumeEducationHeading}[6]{
+  \vspace{-3pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} #2 & \textit{\small #3} \\
+        \small#4 \\
+        \small#5 \\
+        \textit{\small#6}
+    \end{tabular*}\vspace{-10pt}
+}
+
+
+\newcommand{\resumeProjectHeading}[2]{
+    \vspace{-3pt}\item
+    \begin{tabular*}{1.0\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0pt, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-7pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%---------- HEADING ----------
+
+\begin{center}
+    \textbf{\Huge Jason Ashley} \\ \vspace{3pt}
+    \small
+    \faMobile\hspace{.5pt} \href{tel:14348825434}{(434) 882-5434}
+    $|$
+    \faAt\hspace{.5pt} \href{mailto:jason@jash.io}{jason@jash.io}
+    $|$
+    \faLinkedinSquare\hspace{.5pt} \href{https://www.linkedin.com/in/subject-name-here/}{LinkedIn}
+    % $|$
+    % \faGithub \hspace{.5pt} \href{https://github.com/png}{GitHub}
+    $|$
+    \faGlobe\hspace{.5pt} \href{https://jash.io}{jash.io}
+    $|$
+    \faMapMarker\hspace{.5pt} Seattle, WA
+\end{center}
+
+
+
+%----------- EDUCATION -----------
+
+\section{Education}
+  \vspace{1pt}
+  \resumeSubHeadingListStart{}
+    
+    \resumeEducationHeading{University of Virginia}
+      {Charlottesville, VA}{May 2021}
+      {Bachelor of Science, Double Major in Computer Science and Computer Engineering}
+      {Relevant coursework\@: Algorithms, Embedded System Design, and Defense Against the Dark Arts}
+      {Combined Majors GPA\@: 3.912/4.000}
+    
+  \resumeSubHeadingListEnd{}
+
+%----------- WORK EXPERIENCE -----------
+
+\section{Work Experience}
+  \vspace{1pt}
+  \resumeSubHeadingListStart{}
+    
+    \resumeSubheading{Amazon}{Seattle, WA}
+      {August 2021 \textbf{--} Present}
+      {Scout Robotics Embedded Engineer}
+        \resumeItemListStart{}
+            \resumeItem{Integrate new feature requests and debug issues in firmware for lighting boards and ``main'' microcontroller in C, both in $\mu{}$C/OS-II RTOS and bare-metal codebases}
+            \resumeItem{Enhance ROS-based camera, radar, and MCU management drivers written in C++ for safe, reliable autonomous vehicle operation, significantly reducing MCU manager downtime and eliminating unchecked firmware version risks}
+            \resumeItem{Collaborate with external vendors and nearby teams to solve problems and improve products}
+            \resumeItem{Deep dive and resolve issues captured by metrics in AWS CloudWatch, AWS Athena, and system logs in AWS S3}
+            \resumeItem{Develop and maintain software architecture documentation and prepare long-term plans focusing on safety, security, and reliability}
+        \resumeItemListEnd{}
+
+    \resumeSubheading{Lancium Compute}{Charlottesville, VA}
+      {September 2019 \textbf{--} August 2021}
+      {Software Developer}
+        \resumeItemListStart{}
+            \resumeItem{Architected and implemented solutions for CPU and GPU process checkpointing and migration by managing devices and control groups using solutions built in C++ and Java}
+            \resumeItem{Designed, developed, and owned tools for containerization and remote management of compute jobs in Go and C, such as extensions to existing containerization tools to support requests to checkpoint}
+            \resumeItem{Communicated and coordinated operations with engineering teams around the world to release new products}
+        \resumeItemListEnd{}
+    
+    \resumeSubheading{University of Virginia School of Engineering}
+        {Charlottesville, VA}
+        {July 2019 \& Spring 2020 \textbf{--} May 2021}
+        {CS 4102: Algorithms \& CS4414: Operating Systems Teaching Assistant}
+          \resumeItemListStart{}
+              \resumeItem{Led students through problems towards success with individual instruction}
+              \resumeItem{Prepared and organize assignments and assignment schedules}
+              \resumeItem{Assessed student performance and communicate results to faculty}
+          \resumeItemListEnd{}
+  
+    %\resumeSubheading{Frank Batten School of Leadership and Public Policy}
+    %    {Charlottesville, VA}
+    %    {September 2017 \textbf{--} March 2020}
+    %    {IT Support \& Student Developer}
+    %    \resumeItemListStart{}
+    %        \resumeItem{Work with students and faculty to resolve problems through in-person support or ticketing}
+    %        \resumeItem{Develop and integrate software solutions for problems such as mass photo sorting with Google Cloud Vision AI}
+    %    \resumeItemListEnd{}
+  \resumeSubHeadingListEnd{}
+
+%----------- PROJECTS -----------
+
+\section{Projects}
+    \vspace{1pt}
+    \resumeSubHeadingListStart{}
+      
+      \resumeProjectHeading{\textbf{Robotany: Smart Robotic Plant Pot} $|$ 
+          \textit{\href{https://doi.org/10.18130/cjzg-8w16}{Paper}} $|$ \textit{\href{https://github.com/OurFourthRodeo}{GitHub}} $|$
+          \textit{\href{https://youtu.be/P7lLsE0sVAE}{Demo Video}}}{}
+          \resumeItemListStart{}
+            \resumeItem{Published capstone project with focus on IoT, robotics, and signal amplification with noise reduction}
+            \resumeItem{Moves plant based on action potentials, reports soil moisture and plant growth to server to view in application}
+            \resumeItem{Worked on camera driver, sensor capture, ESP32 network connection, API, database, and mobile application}
+            \resumeItem{Utilizes frameworks based on FreeRTOS, Node.js with Express running on AWS EC2, MongoDB, React Native}
+          \resumeItemListEnd{}
+      \resumeProjectHeading{\textbf{Internet-Based Telegraph} $|$
+          \textit{\href{https://oshwlab.com/jasona99/telegraph}{OSHWLab}}}{}
+          \resumeItemListStart{}
+            \resumeItem{An in-progress project to send Morse code messages over the internet from a board with a key-like mechanism}
+            \resumeItem{Includes an ESP32, LCD screen, audio amplification circuit, lighting, and RTC to perform intended functions}
+            \resumeItem{Software stack utilizes Node.js with Express and Arduino}
+          \resumeItemListEnd{}
+      \resumeProjectHeading{\textbf{FPGA Wavetable Synthesizer} $|$
+          \textit{\href{https://github.com/willzhang05/fpga-synthesizer}{GitHub}} $|$ \textit{\href{https://youtu.be/hytf5pJETy8}{Demo Video}}}{}
+          \resumeItemListStart{}
+            \resumeItem{FPGA course project that takes an input from a MIDI keyboard then synthesizes a sample for that note on FPGA}
+            \resumeItem{Worked on reading MIDI bytes from keyboard, wavetable creation/reading, and preparing/sending audio to codec}
+            \resumeItem{Utilizes an Altera DE2--115 FPGA board, a Raspberry Pi as USB and MIDI intermediary, Python, and VHDL}
+          \resumeItemListEnd{}
+      
+    \resumeSubHeadingListEnd{}
+
+%----------- SKILLS -----------
+
+\section{Skills}
+\vspace{1pt}
+\resumeSubHeadingListStart{}
+  \small{\item{
+      \textbf{Programming:} \vspace{-7pt}
+      \resumeItemListStart{}
+        \resumeItem{Proficient in C, C++, Python, MySQL, VHDL, and JavaScript}
+        \resumeItem{Familiar with Java, Go, MATLAB, R, and Verilog}
+      \resumeItemListEnd{}
+      \textbf{Operating Systems:} Extensive experience using/configuring Linux (Ubuntu and Arch distros), Windows, and macOS \\ \vspace{1pt}
+      \textbf{Debugging:} Experience using logic analyzers, oscilloscopes, GDB, and JTAG \\ \vspace{1pt}
+      \textbf{Technologies:} Experience with Git, ROS, FreeRTOS, $\mu{}$C/OS-II, Docker, Amazon Web Services, and Google Cloud} \\ \vspace{1pt}
+      \textbf{Communication Protocols:} Experience working with SPI, UART, I\textsuperscript{2}C, CAN, and Ethernet \\ \vspace{1pt}
+      \textbf{Standards:} Knowledge of and work within MISRA C, ISO 26262, and ISO 21448 \\ \vspace{1pt}
+  }
+\resumeSubHeadingListEnd{}
+
+
+\end{document}
